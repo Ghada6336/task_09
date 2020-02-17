@@ -3,6 +3,11 @@
 {% block title %}List{% endblock title %}
 
 {% block content %}
+<div class="row text-center">
+
+    
+
+</div>
 <br>
 <div class="row">
     {% for restaurant in restaurants %}
@@ -15,14 +20,16 @@
             <h5 class="card-title">{{restaurant.name}}</h5>
             <p class="card-text">{{restaurant.description|truncatechars:25}}</p>
           </div>
+
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-center">
                 <a href="{% url 'restaurant-detail' restaurant.id %}" class="btn btn-outline-dark">View</a>
             </li>
           </ul>
         </div>
+
     </div>
     {% endfor %}
 </div>
-{% endblock content %}
 
+{% endblock content %}
